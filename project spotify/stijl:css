@@ -1,0 +1,5 @@
+* {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  background-color: black;
+  color: rgb(243,243,243);
+}
