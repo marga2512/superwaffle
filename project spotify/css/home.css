@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+}
+
+.small_video {
+  display: flex;
+  justify-content: space-around;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 30px;
+}
+
+h3, p {
+ text-align: center;
+}
