@@ -1,0 +1,123 @@
+@import "reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+
+
+html {
+  background-image: url(./bg/bg2.jpg);   /*https://pngtree.com/free-backgrounds*/
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  color: rgb(243,243,243);
+  background: linear-gradient(180deg, rgba(255,158,61,0.5), rgba(63,205,255,0.5));
+  background-color: rgba(0,0,0,0.2);
+  font-family: "Montserrat", sans-serif;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(255,165,0,0.3);
+  margin: 0rem 15rem;
+  min-height: 90vh;
+  transition: margin 0.4s ease;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0rem 15rem;
+  padding: 1rem 0rem;
+  background-color: rgba(255,165,0,0.8);
+  transition: margin 0.4s ease;
+}
+
+#logo {
+  margin: 0rem 2rem;
+  order: 1;
+}
+
+header li,header ul, footer li, footer ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+}
+
+footer {
+  background-color: rgba(0,0,0,0.9);
+  padding: 4rem 5rem;
+}
+
+a {
+  transition: color 0.4s;
+  color: rgb(107,55,251);
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-decoration: none;
+  padding: 2rem;
+}
+
+a:hover {
+  color: rgb(63,255,237);
+}
+
+p {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+
+
+
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+::-webkit-scrollbar-track {
+  border: none;
+  background-color: rgb(38,38,42);
+}
+
+::-webkit-scrollbar-thumb {
+ 
+  background-color: rgb(108,71,185);
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 1680px) {
+
+  a {
+    font-size: 1.3rem;
+  }
+
+  main {
+    margin: 0rem 5rem;
+  }
+
+  header {
+    margin: 0rem 5rem;
+  }
+
+}
