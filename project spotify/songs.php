@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./css/common.css">
-    <title>Playlists</title>
+    <link rel="stylesheet" type="text/css" href="./css/songs.css">
+    <title>Songs</title>
   </head>
 
   <body id="top">
@@ -21,8 +22,17 @@
     </header>
 
     <main>
-      <h1>Log in to view your playlists</h1>
+      <h1>Top 10 Most listened songs at this moment</h1>
+      <?php
+        include "php\db_connect.php";
+
+        echo "<ul>";
+        include "php\show_all_songs.php";
+        echo "</ul>"
+      ?>
+
     </main>
+
 
     <footer>
       <a href="#top">Back to top</a>
