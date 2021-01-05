@@ -3,9 +3,9 @@
 //parameters
 
 $dbServername = "localhost";
-$dbUsername = "root";
-$dbPassword = "Kirby2468";
-$dbName = "co-working_project";
+$dbUsername = "soundifyCo";
+$dbPassword = "co-Working_123";
+$dbName = "Soundify_Co-working_db";
 
 // $connection = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
 
