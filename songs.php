@@ -1,10 +1,38 @@
+<?php
+
+// Constanten (connectie-instellingen databank)
+define ('DB_HOST', 'localhost');
+define ('DB_USER', 'root');
+define ('DB_PASS', 'Kirby2468');
+define ('DB_NAME', 'co-working_project');
+
+
+date_default_timezone_set('Europe/Brussels');
+
+// Verbinding maken met de databank
+try {
+    $db = new PDO('mysql:host=' . DB_HOST .';dbname=' . DB_NAME . ';charset=utf8mb4', DB_USER, DB_PASS);
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    echo 'Verbindingsfout: ' .  $e->getMessage();
+    exit;
+}
+
+// Opvragen van alle taken uit de tabel tasks
+$stmt = $db->prepare('SELECT * FROM songs_table ORDER BY rating DESC');
+$stmt->execute();
+$items = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./css/common.css">
-    <link rel="stylesheet" type="text/css" href="./css/songs.css">
+    <link rel="stylesheet" type="text/css" href="/css/common.css">
+    <link rel="stylesheet" type="text/css" href="/css/songs.css">
     <title>Songs</title>
   </head>
 
@@ -23,14 +51,38 @@
 
     <main>
       <h1>Top 10 Most listened songs at this moment</h1>
-      <?php
-        include "php\db_connect.php";
 
-        echo "<ul>";
-        include "php\show_all_songs.php";
-        echo "</ul>"
-      ?>
+<?php   if (sizeof($items) > 0) { ?>
 
+      <table>
+          <tr>
+              <th></th>
+              <th>Artist</th>
+              <th>Title</th>
+              <th>Genre</th>
+              <th>Rating</th>
+          </tr>
+
+          <?php foreach ($items as $item) { ?>
+
+          <tr>
+              <td><audio controls="audio" src="<?php echo htmlentities($item['Link']); ?>"></audio></td>
+              <td><?php echo htmlentities($item['Artist']); ?></td>
+              <td><?php echo htmlentities($item['Title']); ?></td>
+              <td><?php echo htmlentities($item['Genre']); ?></td>
+              <td><?php echo htmlentities($item['Rating']); ?></td>
+          </tr>
+
+          <?php } ?>
+
+      </table>
+
+
+<?php
+      } else {
+          echo '<p>0 songs.</p>' . PHP_EOL;
+      }
+?>
     </main>
 
 
