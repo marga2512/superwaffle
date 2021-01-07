@@ -2,9 +2,9 @@
 
 // Constanten (connectie-instellingen databank)
 define ('DB_HOST', 'localhost');
-define ('DB_USER', 'root');
-define ('DB_PASS', 'Kirby2468');
-define ('DB_NAME', 'co-working_project');
+define ('DB_USER', 'soundifyCo');
+define ('DB_PASS', 'co-Working_123');
+define ('DB_NAME', 'Soundify_Co-working_db');
 
 
 date_default_timezone_set('Europe/Brussels');
