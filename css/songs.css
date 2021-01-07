@@ -1,3 +1,35 @@
-li {
-	list-style: none;
+body {
+	min-height: 90vh;	
+}
+
+header {
+	min-height: 10vh;
+}
+
+h1 {
+	text-align: center;
+	line-height: 4rem;
+}
+
+footer {
+	min-height: 10vh;	
+}
+
+table {
+	width: 100%;
+}
+
+th {
+	font-size: 2rem;
+	font-weight: 400;
+	padding-bottom: 2rem;
+}
+
+td {
+	font-size: 1.5rem;
+	font-weight: 300;
+	text-align: center;
+	padding-bottom: 1rem;
+	width: auto;
+
 }
