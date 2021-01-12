@@ -39,20 +39,19 @@ header {
 }
 
 #logo {
-  margin: 0rem 2rem;
+  margin-right: 2rem;
   order: 1;
 }
 
 header li,header ul, footer li, footer ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  display: inline-block;
 
 }
 
 footer {
   background-color: rgba(0,0,0,0.9);
   padding: 4rem 5rem;
+  text-align: center;
 }
 
 a {
@@ -61,7 +60,9 @@ a {
   font-size: 1.5rem;
   font-weight: 400;
   text-decoration: none;
-  padding: 2rem;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 a:hover {
@@ -69,22 +70,22 @@ a:hover {
 }
 
 p {
-  font-size: 1.5rem;
+  font-size: 2vw;
   font-weight: 500;
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 2vw;
   font-weight: 500;
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 3vw;
   font-weight: 700;
 }
 
 h1 {
-  font-size: 3.5rem;
+  font-size: 4vw;
   font-weight: 700;
 }
 
