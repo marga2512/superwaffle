@@ -43,7 +43,7 @@ $items = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="songs.php">Songs</a></li>
-          <li><a href="playlists.html">Playlists</a></li>
+          <li><a href="playlists.php">Playlists</a></li>
           <li><a href="my_account.php">My Account</a></li>
         </ul>
       </nav>
