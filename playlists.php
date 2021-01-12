@@ -35,7 +35,7 @@
     </header>
 
     <main>
-      <h1>Log in to view your playlists</h1>
+
     </main>
 
     <footer>
