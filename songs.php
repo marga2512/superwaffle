@@ -81,12 +81,7 @@ $items = $stmt->fetchAll(PDO::FETCH_ASSOC);
           <tr>
               <td>
                 <audio controls="audio" src="<?php echo htmlentities($item['Link']); ?>"></audio>
-                <div
-  data-lyket-type="like"
-  data-lyket-id="my-first-post"
-  data-lyket-namespace="blog"
-  data-lyket-template="twitter"
-></div>
+
               </td>
               <td><?php echo htmlentities($item['Artist']); ?></td>
               <td><?php echo htmlentities($item['Title']); ?></td>
@@ -97,6 +92,13 @@ $items = $stmt->fetchAll(PDO::FETCH_ASSOC);
           <?php } ?>
 
       </table>
+
+                      <div
+  data-lyket-type="like"
+  data-lyket-id="my-first-post"
+  data-lyket-namespace="blog"
+  data-lyket-template="twitter"
+></div>
 
 
 <?php
