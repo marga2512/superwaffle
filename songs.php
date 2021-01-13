@@ -68,11 +68,11 @@ $items = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
       <table>
           <tr>
-              <th class="click_event"></th>
-              <th class="click_event">Artist</th>
-              <th class="click_event">Title</th>
-              <th class="click_event">Genre</th>
-              <th class="click_event">Rating</th>
+              <th></th>
+              <th>Artist</th>
+              <th>Title</th>
+              <th>Genre</th>
+              <th>Rating</th>
           </tr>
 
           <?php foreach ($items as $item) { ?>
