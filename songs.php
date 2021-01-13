@@ -1,5 +1,3 @@
-<script src="https://unpkg.com/@lyket/widget@latest/dist/lyket.js?apiKey=f2fc8fafa55af59aec90839cd00041"></script>
-
 <?php
 
 // Constanten (connectie-instellingen databank)
@@ -82,7 +80,10 @@ $items = $stmt->fetchAll(PDO::FETCH_ASSOC);
           <tr>
               <td>
                 <audio controls="audio" src="<?php echo htmlentities($item['Link']); ?>"></audio>
-
+                <!-- LikeBtn.com BEGIN -->
+                <span class="likebtn-wrapper" data-theme="custom" data-btn_size="32" data-f_size="16" data-icon_size="24" data-icon_l="hrt6-o" data-icon_l_c="#dc5ca0" data-icon_l_c_v="#fb0505" data-icon_d_c="#af4060" data-icon_d_c_v="#fb0505" data-label_c="#000000" data-label_c_v="#000000" data-f_family="Verdana" data-rich_snippet="true" data-identifier="Song_<?php echo htmlentities($item['ID']); ?>" data-show_like_label="false" data-counter_clickable="true"></span>
+                <script>(function(d,e,s){if(d.getElementById("likebtn_wjs"))return;a=d.createElement(e);m=d.getElementsByTagName(e)[0];a.async=1;a.id="likebtn_wjs";a.src=s;m.parentNode.insertBefore(a, m)})(document,"script","//w.likebtn.com/js/w/widget.js");</script>
+                <!-- LikeBtn.com END -->
               </td>
               <td><?php echo htmlentities($item['Artist']); ?></td>
               <td><?php echo htmlentities($item['Title']); ?></td>
