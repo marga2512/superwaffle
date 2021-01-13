@@ -45,6 +45,8 @@ $items = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
       gtag('config', 'G-PJRJ496LSC');
     </script>
+
+    <script src="https://unpkg.com/@lyket/widget@latest/dist/lyket.js?apiKey=f2fc8fafa55af59aec90839cd00041"></script>
   </head>
 
   <body id="top">
@@ -77,7 +79,15 @@ $items = $stmt->fetchAll(PDO::FETCH_ASSOC);
           <?php foreach ($items as $item) { ?>
 
           <tr>
-              <td><audio controls="audio" src="<?php echo htmlentities($item['Link']); ?>"></audio></td>
+              <td>
+                <audio controls="audio" src="<?php echo htmlentities($item['Link']); ?>">
+                  <div
+                    data-lyket-type="like"
+                    data-lyket-namespace="songs"
+                    data-lyket-template="twitter"
+                  ></div>
+                </audio>
+              </td>
               <td><?php echo htmlentities($item['Artist']); ?></td>
               <td><?php echo htmlentities($item['Title']); ?></td>
               <td><?php echo htmlentities($item['Genre']); ?></td>
