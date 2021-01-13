@@ -66,6 +66,7 @@ $items = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 <?php   if (sizeof($items) > 0) { ?>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+      <script type="text/javascript" src="/js/sort.js"></script>
       <table>
           <tr>
               <th></th>
