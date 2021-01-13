@@ -80,13 +80,12 @@ $items = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
           <tr>
               <td>
-                <audio controls="audio" src="<?php echo htmlentities($item['Link']); ?>">
+                <audio controls="audio" src="<?php echo htmlentities($item['Link']); ?>"></audio>
                   <div
                     data-lyket-type="like"
                     data-lyket-namespace="songs"
                     data-lyket-template="twitter"
                   ></div>
-                </audio>
               </td>
               <td><?php echo htmlentities($item['Artist']); ?></td>
               <td><?php echo htmlentities($item['Title']); ?></td>
