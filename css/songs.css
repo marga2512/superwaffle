@@ -27,6 +27,7 @@ th {
 
 th:hover {
 	color: rgb(116,228,240);
+	cursor: pointer;
 }
 
 td {
