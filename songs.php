@@ -63,7 +63,7 @@ $items = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </header>
 
     <main>
-      <h1>Top 10 Most listened songs at this moment</h1>
+      <h1>Songs</h1>
 
 <?php   if (sizeof($items) > 0) { ?>
 
