@@ -65,15 +65,14 @@ $items = $stmt->fetchAll(PDO::FETCH_ASSOC);
       <h1>Top 10 Most listened songs at this moment</h1>
 
 <?php   if (sizeof($items) > 0) { ?>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-      <script type="text/javascript" src="/js/sort.js"></script>
+
       <table>
           <tr>
-              <th></th>
-              <th>Artist</th>
-              <th>Title</th>
-              <th>Genre</th>
-              <th>Rating</th>
+              <th class="click_event"></th>
+              <th class="click_event">Artist</th>
+              <th class="click_event">Title</th>
+              <th class="click_event">Genre</th>
+              <th class="click_event">Rating</th>
           </tr>
 
           <?php foreach ($items as $item) { ?>
@@ -109,5 +108,7 @@ $items = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <footer>
       <a href="#top">Back to top</a>
     </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/sort.js"></script>
   </body>
 </html>
