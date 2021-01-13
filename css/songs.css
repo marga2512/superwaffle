@@ -20,7 +20,7 @@ table {
 }
 
 th {
-	font-size: 2rem;
+	font-size: 3vw;
 	font-weight: 400;
 	padding-bottom: 2rem;
 }
@@ -31,10 +31,53 @@ th:hover {
 }
 
 td {
-	font-size: 1.5rem;
+	font-size: 2vw;
 	font-weight: 300;
 	text-align: center;
 	padding-bottom: 1rem;
 	width: auto;
+
+}
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { border: 1px solid #ccc; }
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+	
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+
+	td:nth-of-type(1):before { content: "Rating"; }
+	td:nth-of-type(2):before { content: "Artist"; }
+	td:nth-of-type(3):before { content: "Title"; }
+	td:nth-of-type(4):before { content: "Genre"; }
 
 }
