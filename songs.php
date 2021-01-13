@@ -65,7 +65,7 @@ $items = $stmt->fetchAll(PDO::FETCH_ASSOC);
       <h1>Top 10 Most listened songs at this moment</h1>
 
 <?php   if (sizeof($items) > 0) { ?>
-
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
       <table>
           <tr>
               <th></th>
