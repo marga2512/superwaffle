@@ -25,6 +25,10 @@ th {
 	padding-bottom: 2rem;
 }
 
+th:hover {
+	color: rgb(116,228,240);
+}
+
 td {
 	font-size: 1.5rem;
 	font-weight: 300;
