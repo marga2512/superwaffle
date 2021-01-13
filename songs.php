@@ -1,3 +1,5 @@
+<script src="https://unpkg.com/@lyket/widget@latest/dist/lyket.js?apiKey=f2fc8fafa55af59aec90839cd00041"></script>
+
 <?php
 
 // Constanten (connectie-instellingen databank)
@@ -46,7 +48,6 @@ $items = $stmt->fetchAll(PDO::FETCH_ASSOC);
       gtag('config', 'G-PJRJ496LSC');
     </script>
 
-    <script src="https://unpkg.com/@lyket/widget@latest/dist/lyket.js?apiKey=f2fc8fafa55af59aec90839cd00041"></script>
   </head>
 
   <body id="top">
