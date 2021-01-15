@@ -32,15 +32,20 @@ th:hover {
 
 td {
 	font-size: 2vw;
+	line-height: 100%;
 	font-weight: 300;
 	text-align: center;
 	padding-bottom: 1rem;
 	width: auto;
 
 }
-audio{
+
+audio {
 	width: 100%;
 }
+
+
+
 @media 
 only screen and (max-width: 760px),
 (min-device-width: 768px) and (max-device-width: 1024px)  {
